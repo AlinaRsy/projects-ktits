@@ -1,0 +1,77 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+ul, ol, li{
+    list-style: none;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+li{
+    position: relative;
+    margin-left: 20px;
+}
+li::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color:blue;
+    top: 50%;
+    left: -20px;
+    transform: translateY(-50%);
+}
+a{
+    text-decoration: none;
+    font-weight: 500;
+    color: #232323;
+    font-size: 20px;
+}
+span{
+    color: #747474;
+    font-size: 14px;
+}
+body{
+    font-family: Montserrat;
+    color: #232323;
+    background: url('../img/Ellipse.png') 30px 60px no-repeat;
+}
+.container{
+    max-width: 1300px;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.banner{
+    width: 700px;
+    position: absolute;
+    z-index: 1000;
+    top: 50%;
+    transform: translateY(-50%);
+}
+h1{
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-left: 10px;
+}
+h2{
+    font-size: 140px;
+    font-weight: 500;
+    
+}
+p{
+    color: blue;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+}

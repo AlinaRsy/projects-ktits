@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <h2>Projects</h2>
+            <h1>Khaliullina Alina 424WEB</h1>
+        </div>
+        <div class="right">
+            <ul>
+                <p>Ссылки на проекты</p> 
+                <li>
+                    <a href="http://z685.pautinaweb.ru/learn/php2/sm17/">YMFN <span> сайт приюта для животных</span></a>
+                </li>
+                <li>
+                    <a href="http://z685.pautinaweb.ru/learn/projects/raccoon/">raccoon <span>сайт магазина уличной обуви</span></a>
+                </li>
+                <li>
+                    <a href="https://alinarsy.github.io/YG/">YourGarden <span>многостраничная верстка сайта садовых товаров</span></a>
+                </li>
+                <li>
+                    <a href="https://alinarsy.github.io/lava/">LAVA <span>многостраничная верстка сайта банка</span></a>
+                </li>
+                
+                <li>
+                    <a href="https://alinarsy.github.io/mdnHouse/">mdnHouse <span>верстка лендинга</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        let links = document.getElementsByTagName('a');
+        let left = document.querySelector('.left');
+        for(let i=0; i<links.length; i++){
+            let img = document.createElement('img');
+            links[i].onmouseover = function(event){
+                img.src = `assets/img/${i+1}.png`;
+                img.className = 'banner';
+                left.prepend(img);
+            }
+            links[i].onmouseout = function(){
+                img.remove();
+            }
+        }
+    </script>
+</body>
+</html>
